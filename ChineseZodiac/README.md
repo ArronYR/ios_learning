@@ -7,3 +7,4 @@
 ![图片](http://images.helloarron.com/ChineseZodiac.gif)
 
 在逻辑上多了一个绝对值的判断，其他还是按照教程的内容。
+在慕课的例子中布局上只是简单的拖拽，在本例中我加入了autolayout，使其适应各类屏幕。
