@@ -6,3 +6,8 @@
 + 修改了图片查看布局
 
 ![图片](http://images.helloarron.com/BeautyGallery.gif)
+
+
++ 增加Table Bar Controller
+
+![图片](http://images.helloarron.com/BeautyGallery2.gif)
