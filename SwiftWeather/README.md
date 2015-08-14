@@ -7,7 +7,7 @@
 修改内容：
 
 + 网络请求库改为[JohnLui](https://github.com/johnlui/Pitaya)的Pitaya，Github地址：[https://github.com/johnlui/Pitaya](https://github.com/johnlui/Pitaya)
-+ JSON处理使用[SwiftJSON](https://github.com/swiftjson/SwiftJson)库
++ JSON处理使用[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)库
 + 采用Autolayout布局，适配4s等
 
 ### 4s效果
