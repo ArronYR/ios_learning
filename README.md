@@ -16,3 +16,10 @@
 + 女神画廊App（慕课网iOS开发篇中的Demo，[链接](http://www.imooc.com/video/4200)）1⃣️
 + Todo App(慕课网iOS开发篇中的Demo，[链接](http://www.imooc.com/video/5599)）1⃣️
 + SwiftWeather App（[链接](https://github.com/ArronYR/swift_learning/tree/master/SwiftWeather)）2⃣️
+
+
+## About
+
+个人主页：[http://helloarron.com](http://helloarron.com)
+
+个人博客：[http://blog.helloarron.com](http://blog.helloarron.com)
