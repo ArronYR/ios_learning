@@ -14,8 +14,9 @@
 + 十二生肖App（慕课网iOS开发篇中的Demo，[链接](http://www.imooc.com/video/3386)）1⃣️
 + 相亲神器App（慕课网iOS开发篇中的Demo，[链接](http://www.imooc.com/video/3616)）1⃣️
 + 女神画廊App（慕课网iOS开发篇中的Demo，[链接](http://www.imooc.com/video/4200)）1⃣️
-+ Todo App(慕课网iOS开发篇中的Demo，[链接](http://www.imooc.com/video/5599)）1⃣️
-+ SwiftWeather App（[链接](https://github.com/ArronYR/swift_learning/tree/master/SwiftWeather)）2⃣️
++ Todo App (慕课网iOS开发篇中的Demo，[链接](http://www.imooc.com/video/5599)）1⃣️
++ SwiftWeather App (Swift天气App，[链接](https://github.com/ArronYR/swift_learning/tree/master/SwiftWeather))2⃣️
++ Swift_Totalizator (Swift 加法计数器，[链接](http://www.jikexueyuan.com/course/344.html))3⃣️
 
 
 ## About
