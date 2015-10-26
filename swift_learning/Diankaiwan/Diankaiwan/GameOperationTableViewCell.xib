@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameOperationTableViewCell" id="KGk-i7-Jjw" userLabel="GameOperationTableViewCell" customClass="GameOperationTableViewCell" customModule="Diankaiwan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="328"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="327.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnP-1V-yQy">
+                        <rect key="frame" x="8" y="0.0" width="584" height="319.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y2y-y6-y39" userLabel="Banner Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="584" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="GAh-LL-nbt" userLabel="Height Constraint Of Main Pic"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKO-D2-whG" userLabel="Title Label">
+                                <rect key="frame" x="10" y="263.5" width="574" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb0-A6-Kyv">
+                                <rect key="frame" x="10" y="294" width="525" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ono-bk-djn">
+                                <rect key="frame" x="538" y="286" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="KBh-tk-u1l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <state key="normal" title="详情">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.41960784309999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="y2y-y6-y39" secondAttribute="bottom" constant="63.5" id="21Y-y2-Qtu"/>
+                            <constraint firstAttribute="bottom" secondItem="Ono-bk-djn" secondAttribute="bottom" constant="3.5" id="EWK-ng-Rex"/>
+                            <constraint firstItem="Ono-bk-djn" firstAttribute="baseline" secondItem="Cb0-A6-Kyv" secondAttribute="baseline" id="LPR-1P-fU8"/>
+                            <constraint firstItem="Ono-bk-djn" firstAttribute="leading" secondItem="Cb0-A6-Kyv" secondAttribute="trailing" constant="3" id="Mad-Id-jfd"/>
+                            <constraint firstItem="OKO-D2-whG" firstAttribute="trailing" secondItem="y2y-y6-y39" secondAttribute="trailing" id="P5n-SZ-HqN"/>
+                            <constraint firstItem="y2y-y6-y39" firstAttribute="leading" secondItem="XnP-1V-yQy" secondAttribute="leading" id="TAV-4z-02X"/>
+                            <constraint firstItem="Ono-bk-djn" firstAttribute="top" secondItem="OKO-D2-whG" secondAttribute="bottom" constant="1" id="aFM-H2-oku"/>
+                            <constraint firstAttribute="bottom" secondItem="OKO-D2-whG" secondAttribute="bottom" constant="34.5" id="een-FF-Idi"/>
+                            <constraint firstItem="Cb0-A6-Kyv" firstAttribute="leading" secondItem="XnP-1V-yQy" secondAttribute="leading" constant="10" id="f3a-Pf-WgJ"/>
+                            <constraint firstItem="OKO-D2-whG" firstAttribute="leading" secondItem="y2y-y6-y39" secondAttribute="leading" constant="10" id="mKi-wu-U9y"/>
+                            <constraint firstAttribute="trailing" secondItem="y2y-y6-y39" secondAttribute="trailing" id="o6f-IQ-Pir"/>
+                            <constraint firstItem="y2y-y6-y39" firstAttribute="top" secondItem="XnP-1V-yQy" secondAttribute="top" id="qDV-Gr-FY3"/>
+                            <constraint firstAttribute="trailing" secondItem="Ono-bk-djn" secondAttribute="trailing" constant="16" id="sLg-5y-ys5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="leadingMargin" secondItem="XnP-1V-yQy" secondAttribute="leading" id="7qg-gs-0ow"/>
+                    <constraint firstItem="XnP-1V-yQy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="99e-H9-0v2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XnP-1V-yQy" secondAttribute="bottom" id="Ojg-sV-fJS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="XnP-1V-yQy" secondAttribute="trailing" id="kCB-FW-znG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bannerImageView" destination="y2y-y6-y39" id="XP9-dq-Wbd"/>
+                <outlet property="heightConstraintOfMainPic" destination="GAh-LL-nbt" id="8u4-ps-7yu"/>
+                <outlet property="subTitleLabel" destination="Cb0-A6-Kyv" id="1Hn-ZE-bLX"/>
+                <outlet property="titleLabel" destination="OKO-D2-whG" id="0lu-Aw-zZr"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

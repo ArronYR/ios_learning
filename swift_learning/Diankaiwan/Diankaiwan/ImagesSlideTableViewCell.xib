@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagesSlideTableViewCell" id="KGk-i7-Jjw" customClass="ImagesSlideTableViewCell" customModule="Diankaiwan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="181"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="180.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qg4-AE-iRa" customClass="DianKaiScrollView" customModule="Diankaiwan" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="P5p-00-O0B" userLabel="Height Constraint Of Scroll View"/>
+                        </constraints>
+                    </scrollView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SL4-K2-10X">
+                        <rect key="frame" x="281" y="150" width="39" height="37"/>
+                    </pageControl>
+                </subviews>
+                <color key="backgroundColor" red="0.96470588239999999" green="0.41960784309999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="qg4-AE-iRa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IWC-pt-IE6"/>
+                    <constraint firstItem="qg4-AE-iRa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JNa-zX-yeA"/>
+                    <constraint firstItem="SL4-K2-10X" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="UFi-RA-MHa"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qg4-AE-iRa" secondAttribute="bottom" constant="12.5" id="W5j-Tj-hng"/>
+                    <constraint firstItem="qg4-AE-iRa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="bEf-rZ-6W9"/>
+                    <constraint firstAttribute="trailing" secondItem="qg4-AE-iRa" secondAttribute="trailing" id="fvl-XE-wX9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SL4-K2-10X" secondAttribute="bottom" constant="-14.5" id="zqi-tT-hUH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="heightConstraintOfScrollView" destination="P5p-00-O0B" id="wdY-0j-VY9"/>
+                <outlet property="pageControl" destination="SL4-K2-10X" id="eWO-V7-svy"/>
+                <outlet property="scrollView" destination="qg4-AE-iRa" id="8Al-Dg-qJL"/>
+            </connections>
+            <point key="canvasLocation" x="797" y="543.5"/>
+        </tableViewCell>
+    </objects>
+</document>
