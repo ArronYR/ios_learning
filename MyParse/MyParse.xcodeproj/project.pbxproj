@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10AA5351BE73BFF0032880A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AA5341BE73BFF0032880A /* MainViewController.swift */; };
 		B14E452D1BB51DC8005205AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E452C1BB51DC8005205AA /* AppDelegate.swift */; };
 		B14E452F1BB51DC8005205AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E452E1BB51DC8005205AA /* ViewController.swift */; };
 		B14E45321BB51DC8005205AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14E45301BB51DC8005205AA /* Main.storyboard */; };
 		B14E45341BB51DC8005205AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B14E45331BB51DC8005205AA /* Assets.xcassets */; };
 		B14E45371BB51DC8005205AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14E45351BB51DC8005205AA /* LaunchScreen.storyboard */; };
-		B14E45401BB53050005205AA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E453E1BB53050005205AA /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
-		B14E45411BB53050005205AA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E453F1BB53050005205AA /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		B14E45401BB53050005205AA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E453E1BB53050005205AA /* Bolts.framework */; };
+		B14E45411BB53050005205AA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E453F1BB53050005205AA /* Parse.framework */; };
 		B1CEB37C1BD0F44D007DBDC1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37B1BD0F44D007DBDC1 /* AudioToolbox.framework */; };
 		B1CEB37E1BD0F45B007DBDC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37D1BD0F45B007DBDC1 /* CFNetwork.framework */; };
 		B1CEB3801BD0F466007DBDC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37F1BD0F466007DBDC1 /* CoreGraphics.framework */; };
@@ -24,10 +25,11 @@
 		B1CEB38A1BD0F499007DBDC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB3891BD0F499007DBDC1 /* SystemConfiguration.framework */; };
 		B1CEB38C1BD0F4A2007DBDC1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB38B1BD0F4A2007DBDC1 /* libz.tbd */; };
 		B1CEB38E1BD0F4AD007DBDC1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB38D1BD0F4AD007DBDC1 /* libsqlite3.tbd */; };
-		B1CEB3951BD0F886007DBDC1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB3941BD0F886007DBDC1 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B1CEB3951BD0F886007DBDC1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CEB3941BD0F886007DBDC1 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B10AA5341BE73BFF0032880A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B14E45291BB51DC8005205AA /* MyParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14E452C1BB51DC8005205AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14E452E1BB51DC8005205AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				B14E452C1BB51DC8005205AA /* AppDelegate.swift */,
 				B14E452E1BB51DC8005205AA /* ViewController.swift */,
 				B1CEB3941BD0F886007DBDC1 /* SignUpViewController.swift */,
+				B10AA5341BE73BFF0032880A /* MainViewController.swift */,
 				B14E45301BB51DC8005205AA /* Main.storyboard */,
 				B14E45331BB51DC8005205AA /* Assets.xcassets */,
 				B14E45351BB51DC8005205AA /* LaunchScreen.storyboard */,
@@ -200,6 +203,7 @@
 				B1CEB3951BD0F886007DBDC1 /* SignUpViewController.swift in Sources */,
 				B14E452F1BB51DC8005205AA /* ViewController.swift in Sources */,
 				B14E452D1BB51DC8005205AA /* AppDelegate.swift in Sources */,
+				B10AA5351BE73BFF0032880A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -299,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -311,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -329,6 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

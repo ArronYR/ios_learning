@@ -27,6 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        // 启动是检测用户是否已登录
+        let userName: String? = NSUserDefaults.standardUserDefaults().stringForKey("user_name")
+        if userName != nil {
+            // 跳转到主界面
+            let mainStrotyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let main: MainViewController = mainStrotyBoard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+            let mainNav = UINavigationController(rootViewController: main)
+            self.window?.rootViewController = mainNav
+        }
+        
         return true
     }
 

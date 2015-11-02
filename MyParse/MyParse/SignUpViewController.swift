@@ -15,6 +15,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var userEmailAddressTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userPasswordRepeatTextField: UITextField!
+    @IBOutlet weak var registerMaskView: UIView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +57,57 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
-        self.alertAction("错误提示", msg: "请输入人名")
+        
+        let userName = self.userNameTextField.text
+        let userEmail = self.userEmailAddressTextField.text
+        let password = self.userPasswordTextField.text
+        let rePassword = self.userPasswordRepeatTextField.text
+        
+        if (userName!.isEmpty || userEmail!.isEmpty || password!.isEmpty || rePassword!.isEmpty) {
+            self.alertAction("错误提示", msg: "所有字段必须填写！")
+            return
+        }
+        if password?.characters.count < 6 {
+            self.alertAction("错误提示", msg: "输入的密码不能小于6位数！")
+            return
+        }
+        if password! != rePassword! {
+            self.alertAction("错误提示", msg: "两次输入的密码不一致！")
+            return
+        }
+        
+        self.showLoadingIndicator(false)
+        
+        let myUser = PFUser()
+        myUser.username = userEmail
+        myUser.email = userEmail
+        myUser.password = password
+        myUser.setObject(userName!, forKey: "name")
+        
+        // 获取图片
+        let profileImageData = UIImageJPEGRepresentation(profilePhotoImageView.image!, 1)
+        if profileImageData != nil {
+            let profileFile = PFFile(data: profileImageData!)
+            myUser.setObject(profileFile, forKey: "profile_picture")
+        }
+        
+        myUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            var userMessage = "注册成功"
+            self.showLoadingIndicator(true)
+            
+            if !success {
+                userMessage = error!.localizedDescription
+            }
+            let myAlert = UIAlertController(title: "提示", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "好的", style: UIAlertActionStyle.Default, handler: { _ in
+                if success {
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+            })
+            myAlert.addAction(okAction)
+            self.presentViewController(myAlert, animated: true, completion: nil)
+        }
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -65,6 +117,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    // 显示加载圈
+    func showLoadingIndicator(indicator: Bool){
+        self.registerMaskView.hidden = indicator
+        self.loadingIndicator.startAnimating()
+    }
+
     // 系统Alert提示
     func alertAction(title: String, msg: String){
         let alertController = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)
