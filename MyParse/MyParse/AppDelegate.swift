@@ -12,30 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var drawerContainer: MMDrawerController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // [Optional] Power your app with Local Datastore. For more info, go to
-        Parse.enableLocalDatastore()
-        
+
         // Initialize Parse.
+        Parse.enableLocalDatastore()
         Parse.setApplicationId("G16DWydP3pRJGbb7byfbtzEj4qQcJ0Uxp3uSCXbr",
             clientKey: "3f8Fmf1XDE8F4emoEziwVV161LiyDQ5yOBy21jjb")
-        
-        // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         // 启动是检测用户是否已登录
-        let userName: String? = NSUserDefaults.standardUserDefaults().stringForKey("user_name")
-        if userName != nil {
-            // 跳转到主界面
-            let mainStrotyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let main: MainViewController = mainStrotyBoard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
-            let mainNav = UINavigationController(rootViewController: main)
-            self.window?.rootViewController = mainNav
-        }
+        buildUserInterface()
         
         return true
     }
@@ -62,6 +52,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func buildUserInterface(){
+        // 获取用户登录信息
+        let userName: String? = NSUserDefaults.standardUserDefaults().stringForKey("user_name")
+        if userName != nil {
+            // 跳转到主界面
+            let mainStrotyBoard = UIStoryboard(name: "Main", bundle: nil)
+            
+            // 通过Identifier获取ViewCOntroller
+            let main: MainViewController = mainStrotyBoard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+            let left: LeftSideViewController = mainStrotyBoard.instantiateViewControllerWithIdentifier("LeftSideViewController") as! LeftSideViewController
+            let right: RightSideViewController = mainStrotyBoard.instantiateViewControllerWithIdentifier("RightSideViewController") as! RightSideViewController
+            
+            let mainNav = UINavigationController(rootViewController: main)
+            let leftNav = UINavigationController(rootViewController: left)
+            let rightNav = UINavigationController(rootViewController: right)
+            
+            self.drawerContainer = MMDrawerController(centerViewController: mainNav, leftDrawerViewController: leftNav, rightDrawerViewController: rightNav)
+            // 添加手势
+            drawerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView
+            drawerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView
+            
+            self.window?.rootViewController = drawerContainer
+        }
+    }
 
 }
 

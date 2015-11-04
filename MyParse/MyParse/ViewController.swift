@@ -10,10 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var loginMaskView: UIView!
     @IBOutlet weak var userEmailAddressTextField: UITextField!
     @IBOutlet weak var userPasswordTextFild: UITextField!
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +43,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.showLoadingIndicator(false)
+        // 显示加载圈
+        self.showLoadingIndicator("登录", detailText: "正在登录，请请等待...", indicator: true)
         
         PFUser.logInWithUsernameInBackground(userEmail!, password: password!) { (user: PFUser?, error: NSError?) -> Void in
             var userMessage = "登录成功"
             if user != nil {
-                self.showLoadingIndicator(true)
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                 
                 // 存储登录后的用户名
                 let userName = user?.username
@@ -58,13 +57,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 NSUserDefaults.standardUserDefaults().synchronize()
                 
                 // 跳转到主界面
-                let mainStrotyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let main: MainViewController = mainStrotyBoard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
-                let mainNav = UINavigationController(rootViewController: main)
                 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                appDelegate.window?.rootViewController = mainNav
+                appDelegate.buildUserInterface()
+                
             }else{
-                self.showLoadingIndicator(true)
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                
                 userMessage = error!.localizedDescription
                 
                 self.alertAction("警告", msg: userMessage)
@@ -73,9 +71,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     // 显示加载圈
-    func showLoadingIndicator(indicator: Bool){
-        self.loginMaskView.hidden = indicator
-        self.loadingIndicator.startAnimating()
+    func showLoadingIndicator(text: String, detailText: String, indicator: Bool){
+        let spiningActivity = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        spiningActivity.labelText = text
+        spiningActivity.detailsLabelText = detailText
+        spiningActivity.userInteractionEnabled = indicator
     }
     
     // 系统Alert提示

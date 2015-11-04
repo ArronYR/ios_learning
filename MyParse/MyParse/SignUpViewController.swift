@@ -15,8 +15,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var userEmailAddressTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var userPasswordRepeatTextField: UITextField!
-    @IBOutlet weak var registerMaskView: UIView!
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +74,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             return
         }
         
-        self.showLoadingIndicator(false)
+        // 显示加载圈
+        self.showLoadingIndicator("注册", detailText: "正在注册，请等待...", indicator: false)
         
         let myUser = PFUser()
         myUser.username = userEmail
@@ -93,7 +92,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         myUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             var userMessage = "注册成功"
-            self.showLoadingIndicator(true)
+            
+            MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             
             if !success {
                 userMessage = error!.localizedDescription
@@ -118,9 +118,11 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     // 显示加载圈
-    func showLoadingIndicator(indicator: Bool){
-        self.registerMaskView.hidden = indicator
-        self.loadingIndicator.startAnimating()
+    func showLoadingIndicator(text: String, detailText: String, indicator: Bool){
+        let spiningActivity = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        spiningActivity.labelText = text
+        spiningActivity.detailsLabelText = detailText
+        spiningActivity.userInteractionEnabled = indicator
     }
 
     // 系统Alert提示

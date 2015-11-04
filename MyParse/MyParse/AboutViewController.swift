@@ -1,14 +1,14 @@
 //
-//  MainViewController.swift
+//  AboutViewController.swift
 //  MyParse
 //
-//  Created by YangRong on 15/11/2.
+//  Created by YangRong on 15/11/4.
 //  Copyright © 2015年 Arron. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class AboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +21,9 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func leftSideButtonTapped(sender: AnyObject) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.drawerContainer?.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
-    }
-    
-    @IBAction func rightSideButtonTapped(sender: AnyObject) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.drawerContainer?.toggleDrawerSide(MMDrawerSide.Right, animated: true, completion: nil)
     }
     
 }
