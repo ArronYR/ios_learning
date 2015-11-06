@@ -15,7 +15,6 @@
 		B12F743D1BE9B472001470A9 /* LeftSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F743C1BE9B472001470A9 /* LeftSideViewController.swift */; };
 		B12F743F1BE9B47F001470A9 /* RightSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F743E1BE9B47F001470A9 /* RightSideViewController.swift */; };
 		B12F74411BE9D727001470A9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F74401BE9D727001470A9 /* AboutViewController.swift */; };
-		B12F74451BEA2105001470A9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B12F74441BEA2105001470A9 /* MBProgressHUD.m */; };
 		B14E452D1BB51DC8005205AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E452C1BB51DC8005205AA /* AppDelegate.swift */; };
 		B14E452F1BB51DC8005205AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14E452E1BB51DC8005205AA /* ViewController.swift */; };
 		B14E45321BB51DC8005205AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14E45301BB51DC8005205AA /* Main.storyboard */; };
@@ -23,6 +22,7 @@
 		B14E45371BB51DC8005205AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14E45351BB51DC8005205AA /* LaunchScreen.storyboard */; };
 		B14E45401BB53050005205AA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E453E1BB53050005205AA /* Bolts.framework */; };
 		B14E45411BB53050005205AA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E453F1BB53050005205AA /* Parse.framework */; };
+		B17DABE61BEC96FF00B0554F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B17DABE51BEC96FF00B0554F /* MBProgressHUD.m */; };
 		B1CEB37C1BD0F44D007DBDC1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37B1BD0F44D007DBDC1 /* AudioToolbox.framework */; };
 		B1CEB37E1BD0F45B007DBDC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37D1BD0F45B007DBDC1 /* CFNetwork.framework */; };
 		B1CEB3801BD0F466007DBDC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37F1BD0F466007DBDC1 /* CoreGraphics.framework */; };
@@ -50,8 +50,6 @@
 		B12F743C1BE9B472001470A9 /* LeftSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideViewController.swift; sourceTree = "<group>"; };
 		B12F743E1BE9B47F001470A9 /* RightSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideViewController.swift; sourceTree = "<group>"; };
 		B12F74401BE9D727001470A9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		B12F74431BEA2105001470A9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		B12F74441BEA2105001470A9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		B14E45291BB51DC8005205AA /* MyParse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyParse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14E452C1BB51DC8005205AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B14E452E1BB51DC8005205AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +59,8 @@
 		B14E45381BB51DC8005205AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B14E453E1BB53050005205AA /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B14E453F1BB53050005205AA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B17DABE41BEC96FF00B0554F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		B17DABE51BEC96FF00B0554F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		B1CEB37B1BD0F44D007DBDC1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B1CEB37D1BD0F45B007DBDC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B1CEB37F1BD0F466007DBDC1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,8 +117,8 @@
 		B12F74421BEA20F5001470A9 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				B12F74431BEA2105001470A9 /* MBProgressHUD.h */,
-				B12F74441BEA2105001470A9 /* MBProgressHUD.m */,
+				B17DABE41BEC96FF00B0554F /* MBProgressHUD.h */,
+				B17DABE51BEC96FF00B0554F /* MBProgressHUD.m */,
 			);
 			name = MBProgressHUD;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 				B12F743B1BE9AB9A001470A9 /* UIViewController+MMDrawerController.m in Sources */,
 				B12F743F1BE9B47F001470A9 /* RightSideViewController.swift in Sources */,
 				B14E452D1BB51DC8005205AA /* AppDelegate.swift in Sources */,
-				B12F74451BEA2105001470A9 /* MBProgressHUD.m in Sources */,
+				B17DABE61BEC96FF00B0554F /* MBProgressHUD.m in Sources */,
 				B12F74391BE9AB9A001470A9 /* MMDrawerController.m in Sources */,
 				B10AA5351BE73BFF0032880A /* MainViewController.swift in Sources */,
 				B12F743D1BE9B472001470A9 /* LeftSideViewController.swift in Sources */,
