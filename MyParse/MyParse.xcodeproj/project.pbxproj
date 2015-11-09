@@ -23,6 +23,8 @@
 		B14E45401BB53050005205AA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E453E1BB53050005205AA /* Bolts.framework */; };
 		B14E45411BB53050005205AA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14E453F1BB53050005205AA /* Parse.framework */; };
 		B17DABE61BEC96FF00B0554F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B17DABE51BEC96FF00B0554F /* MBProgressHUD.m */; };
+		B183E0F91BF043CC008C8694 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183E0F81BF043CC008C8694 /* PasswordResetViewController.swift */; };
+		B183E0FB1BF06BAC008C8694 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183E0FA1BF06BAC008C8694 /* EditProfileViewController.swift */; };
 		B1CEB37C1BD0F44D007DBDC1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37B1BD0F44D007DBDC1 /* AudioToolbox.framework */; };
 		B1CEB37E1BD0F45B007DBDC1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37D1BD0F45B007DBDC1 /* CFNetwork.framework */; };
 		B1CEB3801BD0F466007DBDC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEB37F1BD0F466007DBDC1 /* CoreGraphics.framework */; };
@@ -61,6 +63,8 @@
 		B14E453F1BB53050005205AA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B17DABE41BEC96FF00B0554F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
 		B17DABE51BEC96FF00B0554F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		B183E0F81BF043CC008C8694 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		B183E0FA1BF06BAC008C8694 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		B1CEB37B1BD0F44D007DBDC1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B1CEB37D1BD0F45B007DBDC1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B1CEB37F1BD0F466007DBDC1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,6 +157,8 @@
 				B12F743C1BE9B472001470A9 /* LeftSideViewController.swift */,
 				B12F743E1BE9B47F001470A9 /* RightSideViewController.swift */,
 				B12F74401BE9D727001470A9 /* AboutViewController.swift */,
+				B183E0F81BF043CC008C8694 /* PasswordResetViewController.swift */,
+				B183E0FA1BF06BAC008C8694 /* EditProfileViewController.swift */,
 				B10AA5341BE73BFF0032880A /* MainViewController.swift */,
 				B14E45301BB51DC8005205AA /* Main.storyboard */,
 				B14E45331BB51DC8005205AA /* Assets.xcassets */,
@@ -258,7 +264,9 @@
 				B12F74381BE9AB9A001470A9 /* MMDrawerBarButtonItem.m in Sources */,
 				B12F743B1BE9AB9A001470A9 /* UIViewController+MMDrawerController.m in Sources */,
 				B12F743F1BE9B47F001470A9 /* RightSideViewController.swift in Sources */,
+				B183E0FB1BF06BAC008C8694 /* EditProfileViewController.swift in Sources */,
 				B14E452D1BB51DC8005205AA /* AppDelegate.swift in Sources */,
+				B183E0F91BF043CC008C8694 /* PasswordResetViewController.swift in Sources */,
 				B17DABE61BEC96FF00B0554F /* MBProgressHUD.m in Sources */,
 				B12F74391BE9AB9A001470A9 /* MMDrawerController.m in Sources */,
 				B10AA5351BE73BFF0032880A /* MainViewController.swift in Sources */,

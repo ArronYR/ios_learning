@@ -19,17 +19,8 @@ class LeftSideViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        let userName = PFUser.currentUser()?.username
-        self.userNamelabel.text = userName
-        
-        let profilePictureObject = PFUser.currentUser()?.objectForKey("profile_picture") as! PFFile
-        profilePictureObject.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
-            if let imageData = imageData{
-                self.userProfileImageView.image = UIImage(data: imageData)
-            }
-        }
+        // 加载用户信息
+        self.loadUserDetail()
         
         // 默认选中第一个
         let selectedIndex: Int = 0
@@ -84,6 +75,15 @@ class LeftSideViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    @IBAction func editButtonTapped(sender: AnyObject) {
+        let editProfile = self.storyboard?.instantiateViewControllerWithIdentifier("EditProfileViewController") as! EditProfileViewController
+        editProfile.opener = self
+        
+        let editProfileNav = UINavigationController(rootViewController: editProfile)
+        self.presentViewController(editProfileNav, animated: true, completion: nil)
+        
+    }
+    
     func logoutTapped() {
         self.logoutConfirm("退出", msg: "退出 MyParse 应用", okCallback: { () -> Void in
             NSUserDefaults.standardUserDefaults().removeObjectForKey("user_name")
@@ -126,6 +126,20 @@ class LeftSideViewController: UIViewController, UITableViewDataSource, UITableVi
         myAlert.addAction(okAction)
         myAlert.addAction(cancelAction)
         self.presentViewController(myAlert, animated: true, completion: nil)
+    }
+    
+    // 加载用户信息
+    func loadUserDetail(){
+        let userName = PFUser.currentUser()?.username
+        self.userNamelabel.text = userName
+        
+        let profilePictureObject = PFUser.currentUser()?.objectForKey("profile_picture") as! PFFile
+        profilePictureObject.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+            if let imageData = imageData{
+                self.userProfileImageView.image = UIImage(data: imageData)
+            }
+        }
+
     }
     
     
