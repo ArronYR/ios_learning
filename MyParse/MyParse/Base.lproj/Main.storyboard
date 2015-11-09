@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +30,7 @@
                                 <rect key="frame" x="70" y="140" width="510" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad" returnKeyType="next"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcf-cv-XBP">
                                 <rect key="frame" x="20" y="201" width="51" height="20.5"/>
@@ -202,19 +203,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZU-sm-IsD">
                                 <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geisha" translatesAutoresizingMaskIntoConstraints="NO" id="YLS-i9-s7e">
-                                        <rect key="frame" x="56" y="35" width="108" height="108"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="108" id="J6c-aV-20Y"/>
-                                            <constraint firstAttribute="width" constant="108" id="mdR-x3-Ibt"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vn-pc-FtK">
                                         <rect key="frame" x="474" y="74" width="60" height="30"/>
                                         <animations/>
@@ -267,6 +255,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geisha" translatesAutoresizingMaskIntoConstraints="NO" id="YLS-i9-s7e">
+                                        <rect key="frame" x="56" y="35" width="108" height="108"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="108" id="J6c-aV-20Y"/>
+                                            <constraint firstAttribute="width" constant="108" id="mdR-x3-Ibt"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <constraints>
@@ -592,8 +593,101 @@
                     <view key="view" contentMode="scaleToFill" id="2JC-7t-e38">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYE-bO-AOz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geisha" translatesAutoresizingMaskIntoConstraints="NO" id="Zks-ys-zkV">
+                                        <rect key="frame" x="50" y="30" width="108" height="108"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="108" id="PK6-BD-F2i"/>
+                                            <constraint firstAttribute="width" constant="108" id="eue-XY-FVy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J77-da-3FM">
+                                        <rect key="frame" x="484" y="69" width="60" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="修改头像"/>
+                                        <connections>
+                                            <action selector="selectProfilePhotoButtonTapped:" destination="acW-gK-NKL" eventType="touchUpInside" id="MF2-xl-BLC"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0c5-tU-gnz">
+                                        <rect key="frame" x="20" y="188" width="560" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbq-JD-BAQ">
+                                        <rect key="frame" x="20" y="233" width="560" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2UM-BH-nhT">
+                                        <rect key="frame" x="20" y="278" width="560" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipd-J1-BEl">
+                                        <rect key="frame" x="263.5" y="333" width="73" height="35"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.96470588235294119" green="0.32941176470588235" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Nb2-ef-3JW"/>
+                                            <constraint firstAttribute="width" constant="73" id="uHZ-D6-CQa"/>
+                                        </constraints>
+                                        <state key="normal" title="保存">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="acW-gK-NKL" eventType="touchUpInside" id="hgG-ka-QzK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="ipd-J1-BEl" firstAttribute="top" secondItem="2UM-BH-nhT" secondAttribute="bottom" constant="25" id="Di7-VT-rOh"/>
+                                    <constraint firstItem="0c5-tU-gnz" firstAttribute="top" secondItem="Zks-ys-zkV" secondAttribute="bottom" constant="50" id="Far-Zp-tdr"/>
+                                    <constraint firstItem="J77-da-3FM" firstAttribute="centerY" secondItem="Zks-ys-zkV" secondAttribute="centerY" id="H96-Id-4J2"/>
+                                    <constraint firstAttribute="bottom" secondItem="ipd-J1-BEl" secondAttribute="bottom" constant="232" id="OlP-lK-Pam"/>
+                                    <constraint firstItem="Zks-ys-zkV" firstAttribute="top" secondItem="eYE-bO-AOz" secondAttribute="top" constant="30" id="P5b-uu-haN"/>
+                                    <constraint firstItem="ipd-J1-BEl" firstAttribute="centerX" secondItem="eYE-bO-AOz" secondAttribute="centerX" id="WDF-c0-FWk"/>
+                                    <constraint firstItem="gbq-JD-BAQ" firstAttribute="top" secondItem="0c5-tU-gnz" secondAttribute="bottom" constant="15" id="c9b-8V-QJ3"/>
+                                    <constraint firstItem="2UM-BH-nhT" firstAttribute="top" secondItem="gbq-JD-BAQ" secondAttribute="bottom" constant="15" id="ggo-r0-ng9"/>
+                                    <constraint firstItem="Zks-ys-zkV" firstAttribute="leading" secondItem="eYE-bO-AOz" secondAttribute="leading" constant="50" id="lW0-S0-BgA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lW0-S0-BgA"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0c5-tU-gnz" secondAttribute="trailing" id="0tC-lR-Z97"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gbq-JD-BAQ" secondAttribute="trailing" id="59l-h7-AAT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J77-da-3FM" secondAttribute="trailing" constant="36" id="7b2-qg-oqP"/>
+                            <constraint firstAttribute="trailing" secondItem="eYE-bO-AOz" secondAttribute="trailing" id="FDC-rz-Z2P"/>
+                            <constraint firstItem="eYE-bO-AOz" firstAttribute="leading" secondItem="2JC-7t-e38" secondAttribute="leading" id="MlZ-eP-tTd"/>
+                            <constraint firstItem="eYE-bO-AOz" firstAttribute="top" secondItem="vJ5-2R-Vdv" secondAttribute="bottom" constant="-64" id="UrY-Id-hPi"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2UM-BH-nhT" secondAttribute="leading" id="Vwp-aJ-Jsr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="gbq-JD-BAQ" secondAttribute="leading" id="Yyd-cF-iZo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2UM-BH-nhT" secondAttribute="trailing" id="cys-Ep-CZv"/>
+                            <constraint firstItem="Zks-ys-zkV" firstAttribute="leading" secondItem="2JC-7t-e38" secondAttribute="leadingMargin" constant="30" id="hY0-QG-Izq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0c5-tU-gnz" secondAttribute="leading" id="jfU-Un-t3J"/>
+                            <constraint firstItem="v8s-qS-UqI" firstAttribute="top" secondItem="eYE-bO-AOz" secondAttribute="centerY" constant="300" id="nvQ-fc-ESm"/>
+                            <constraint firstItem="v8s-qS-UqI" firstAttribute="top" secondItem="eYE-bO-AOz" secondAttribute="bottom" id="rV8-br-4vM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="编辑用户信息" id="4QP-iI-ehe">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="bQV-6E-6h2">
@@ -602,6 +696,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="gbq-JD-BAQ" id="Nu5-7Z-zhc"/>
+                        <outlet property="profileImageView" destination="Zks-ys-zkV" id="sGN-wm-40k"/>
+                        <outlet property="rePasswordTextField" destination="2UM-BH-nhT" id="0Ia-vy-9us"/>
+                        <outlet property="userNameTextField" destination="0c5-tU-gnz" id="kdj-rp-GW4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SlL-FT-xR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

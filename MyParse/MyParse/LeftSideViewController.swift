@@ -139,7 +139,6 @@ class LeftSideViewController: UIViewController, UITableViewDataSource, UITableVi
                 self.userProfileImageView.image = UIImage(data: imageData)
             }
         }
-
     }
     
     
