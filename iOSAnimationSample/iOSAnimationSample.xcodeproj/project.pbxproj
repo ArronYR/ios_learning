@@ -16,6 +16,10 @@
 		B1A24B431CBFA976007290BB /* OpacityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B421CBFA976007290BB /* OpacityViewController.swift */; };
 		B1A24B451CBFAB6D007290BB /* ScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B441CBFAB6D007290BB /* ScaleViewController.swift */; };
 		B1A24B471CBFAE33007290BB /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B461CBFAE33007290BB /* ColorViewController.swift */; };
+		B1A24B491CBFB012007290BB /* RotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B481CBFB012007290BB /* RotationViewController.swift */; };
+		B1A24B4B1CBFB68A007290BB /* RepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B4A1CBFB68A007290BB /* RepeatViewController.swift */; };
+		B1A24B4D1CBFBC2F007290BB /* EasingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B4C1CBFBC2F007290BB /* EasingViewController.swift */; };
+		B1A24B4F1CBFBF14007290BB /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B4E1CBFBF14007290BB /* SpringViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		B1A24B421CBFA976007290BB /* OpacityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpacityViewController.swift; sourceTree = "<group>"; };
 		B1A24B441CBFAB6D007290BB /* ScaleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleViewController.swift; sourceTree = "<group>"; };
 		B1A24B461CBFAE33007290BB /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		B1A24B481CBFB012007290BB /* RotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationViewController.swift; sourceTree = "<group>"; };
+		B1A24B4A1CBFB68A007290BB /* RepeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatViewController.swift; sourceTree = "<group>"; };
+		B1A24B4C1CBFBC2F007290BB /* EasingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingViewController.swift; sourceTree = "<group>"; };
+		B1A24B4E1CBFBF14007290BB /* SpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,10 @@
 				B1A24B421CBFA976007290BB /* OpacityViewController.swift */,
 				B1A24B441CBFAB6D007290BB /* ScaleViewController.swift */,
 				B1A24B461CBFAE33007290BB /* ColorViewController.swift */,
+				B1A24B481CBFB012007290BB /* RotationViewController.swift */,
+				B1A24B4A1CBFB68A007290BB /* RepeatViewController.swift */,
+				B1A24B4C1CBFBC2F007290BB /* EasingViewController.swift */,
+				B1A24B4E1CBFBF14007290BB /* SpringViewController.swift */,
 				B1A24B321CBF9E16007290BB /* Main.storyboard */,
 				B1A24B351CBF9E16007290BB /* Assets.xcassets */,
 				B1A24B371CBF9E16007290BB /* LaunchScreen.storyboard */,
@@ -150,8 +162,12 @@
 			files = (
 				B1A24B411CBFA014007290BB /* PositionViewController.swift in Sources */,
 				B1A24B451CBFAB6D007290BB /* ScaleViewController.swift in Sources */,
+				B1A24B4D1CBFBC2F007290BB /* EasingViewController.swift in Sources */,
+				B1A24B4F1CBFBF14007290BB /* SpringViewController.swift in Sources */,
 				B1A24B311CBF9E16007290BB /* ViewController.swift in Sources */,
 				B1A24B431CBFA976007290BB /* OpacityViewController.swift in Sources */,
+				B1A24B491CBFB012007290BB /* RotationViewController.swift in Sources */,
+				B1A24B4B1CBFB68A007290BB /* RepeatViewController.swift in Sources */,
 				B1A24B471CBFAE33007290BB /* ColorViewController.swift in Sources */,
 				B1A24B2F1CBF9E16007290BB /* AppDelegate.swift in Sources */,
 			);
