@@ -36,7 +36,7 @@ class SpringViewController: UIViewController {
             self.redSquare.center.x = self.view.bounds.width - self.redSquare.center.x
         }, completion: nil)
         
-        UIView.animateWithDuration(2, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 1, options: [], animations: { () -> Void in
+        UIView.animateWithDuration(3, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 1, options: [], animations: { () -> Void in
             self.orangeSquare.center.x = self.view.bounds.width - self.orangeSquare.center.x
         }, completion: nil)
     }

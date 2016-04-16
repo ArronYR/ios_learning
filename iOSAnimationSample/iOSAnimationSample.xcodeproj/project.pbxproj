@@ -20,6 +20,7 @@
 		B1A24B4B1CBFB68A007290BB /* RepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B4A1CBFB68A007290BB /* RepeatViewController.swift */; };
 		B1A24B4D1CBFBC2F007290BB /* EasingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B4C1CBFBC2F007290BB /* EasingViewController.swift */; };
 		B1A24B4F1CBFBF14007290BB /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A24B4E1CBFBF14007290BB /* SpringViewController.swift */; };
+		B1D45F5A1CC21CBF00CEBB73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D45F591CC21CBF00CEBB73 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B1A24B4A1CBFB68A007290BB /* RepeatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatViewController.swift; sourceTree = "<group>"; };
 		B1A24B4C1CBFBC2F007290BB /* EasingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasingViewController.swift; sourceTree = "<group>"; };
 		B1A24B4E1CBFBF14007290BB /* SpringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
+		B1D45F591CC21CBF00CEBB73 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B1A24B4A1CBFB68A007290BB /* RepeatViewController.swift */,
 				B1A24B4C1CBFBC2F007290BB /* EasingViewController.swift */,
 				B1A24B4E1CBFBF14007290BB /* SpringViewController.swift */,
+				B1D45F591CC21CBF00CEBB73 /* LoginViewController.swift */,
 				B1A24B321CBF9E16007290BB /* Main.storyboard */,
 				B1A24B351CBF9E16007290BB /* Assets.xcassets */,
 				B1A24B371CBF9E16007290BB /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 				B1A24B4B1CBFB68A007290BB /* RepeatViewController.swift in Sources */,
 				B1A24B471CBFAE33007290BB /* ColorViewController.swift in Sources */,
 				B1A24B2F1CBF9E16007290BB /* AppDelegate.swift in Sources */,
+				B1D45F5A1CC21CBF00CEBB73 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +321,7 @@
 				B1A24B3F1CBF9E16007290BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
