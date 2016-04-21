@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var bubble1: UIImageView!
     @IBOutlet weak var bubble2: UIImageView!
@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: [], animations: { () -> Void in
@@ -116,7 +116,7 @@ class LoginViewController: UIViewController {
         UIView.animateWithDuration(0.3) { () -> Void in
             self.loginButton.center = self.loginPosition
         }
-        self.loginButton.center.x -= 30
+        
         UIView.animateWithDuration(1.5, delay: 0, usingSpringWithDamping: 0.1, initialSpringVelocity: 0, options: [], animations: { () -> Void in
             self.loginButton.center.x += 30
         }, completion: { _ in
@@ -130,4 +130,15 @@ class LoginViewController: UIViewController {
             })
         })
     }
+    
+    //隐藏键盘
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.username.resignFirstResponder()
+        self.password.resignFirstResponder()
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
 }

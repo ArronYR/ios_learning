@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="DAH-nO-G92">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DAH-nO-G92">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Table View Controller-->
@@ -242,25 +243,26 @@
         <scene sceneID="Osl-zX-vOb">
             <objects>
                 <viewController id="zbS-aG-TIy" customClass="PositionViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vse-MD-rht"/>
+                        <viewControllerLayoutGuide type="bottom" id="LxL-wB-Jsi"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Jp7-fB-CQc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="KBt-Zo-vpx">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBt-Zo-vpx">
                                 <rect key="frame" x="120" y="100" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="fwD-fU-3S1">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwD-fU-3S1">
                                 <rect key="frame" x="229" y="100" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="6QM-9p-36a">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-9p-36a">
                                 <rect key="frame" x="10" y="100" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -283,13 +285,16 @@
         <scene sceneID="rZd-DW-uce">
             <objects>
                 <viewController id="8VI-fZ-Hwu" customClass="ScaleViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J7M-jI-LKn"/>
+                        <viewControllerLayoutGuide type="bottom" id="JBR-A2-7B6"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="j9i-Tx-Qhf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="p0P-HW-mt1">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p0P-HW-mt1">
                                 <rect key="frame" x="120" y="244" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.3294117647" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -310,25 +315,26 @@
         <scene sceneID="ZbF-j9-Dhm">
             <objects>
                 <viewController id="i4K-Xz-LPc" customClass="RepeatViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="brc-yY-yqD"/>
+                        <viewControllerLayoutGuide type="bottom" id="1sp-6r-yN7"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="r54-ef-IIB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="wTY-dA-nt7">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTY-dA-nt7">
                                 <rect key="frame" x="20" y="118" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.78823529410000004" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="vy1-Tz-lWu">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vy1-Tz-lWu">
                                 <rect key="frame" x="20" y="213" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.3294117647" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="GYC-R2-puR">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GYC-R2-puR">
                                 <rect key="frame" x="20" y="307" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -351,25 +357,26 @@
         <scene sceneID="b0C-7v-uDa">
             <objects>
                 <viewController id="T28-bk-ham" customClass="SpringViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JlN-hW-xee"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Kd-aK-d2c"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="v0O-gY-xU8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="EiS-2d-YDV">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EiS-2d-YDV">
                                 <rect key="frame" x="20" y="122" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.78823529410000004" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="bCP-fk-Y2a">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCP-fk-Y2a">
                                 <rect key="frame" x="20" y="217" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.3294117647" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="vGp-c1-hvq">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vGp-c1-hvq">
                                 <rect key="frame" x="20" y="311" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -392,17 +399,19 @@
         <scene sceneID="8cx-qs-PZ0">
             <objects>
                 <viewController id="YRi-Ch-2ga" customClass="ColorViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Sl-Xo-PIA"/>
+                        <viewControllerLayoutGuide type="bottom" id="0HM-MX-6dS"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZzU-Ci-bnm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="0tQ-p5-zCP">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tQ-p5-zCP">
                                 <rect key="frame" x="70" y="194" width="180" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Arron" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CK5-hs-421">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello Arron" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK5-hs-421">
                                         <rect key="frame" x="47" y="79" width="86" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -430,13 +439,16 @@
         <scene sceneID="F9B-O2-UqD">
             <objects>
                 <viewController id="QpG-1C-ONg" customClass="RotationViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UHO-xY-l28"/>
+                        <viewControllerLayoutGuide type="bottom" id="UlE-7O-I1e"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YnG-Ru-5hv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="Yyt-u3-a1c">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-u3-a1c">
                                 <rect key="frame" x="100" y="224" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.3294117647" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -457,31 +469,31 @@
         <scene sceneID="46o-NH-g9S">
             <objects>
                 <viewController id="ykJ-JF-wxw" customClass="EasingViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4UV-c0-Kjg"/>
+                        <viewControllerLayoutGuide type="bottom" id="nqO-1q-8dF"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RVY-Uv-rVL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="ZJg-xa-lYw">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJg-xa-lYw">
                                 <rect key="frame" x="20" y="107" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.78823529410000004" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="JCd-YH-6wR">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JCd-YH-6wR">
                                 <rect key="frame" x="20" y="197" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.3294117647" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="gax-V1-2ni">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gax-V1-2ni">
                                 <rect key="frame" x="20" y="286" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="1gh-k2-XfE">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1gh-k2-XfE">
                                 <rect key="frame" x="20" y="372" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.83821604500000002" blue="0.24133365709999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -505,69 +517,74 @@
         <scene sceneID="ya2-F5-nlt">
             <objects>
                 <viewController id="wPA-Jv-5eP" customClass="LoginViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jY2-ZT-EMQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="nTE-qd-Yqh"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rfy-ev-QzC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background" id="511-Jk-cZz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="511-Jk-cZz">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="667"/>
                                 <animations/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bubble1" id="heB-qa-UKz">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bubble1" translatesAutoresizingMaskIntoConstraints="NO" id="heB-qa-UKz">
                                 <rect key="frame" x="27" y="118" width="92" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bubble2" id="PKt-vs-dxR">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bubble2" translatesAutoresizingMaskIntoConstraints="NO" id="PKt-vs-dxR">
                                 <rect key="frame" x="168" y="133" width="149" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bubble3" id="Zhc-GU-YCC">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bubble3" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-GU-YCC">
                                 <rect key="frame" x="4" y="256" width="156" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bubble4" id="ehS-WT-YFq">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bubble4" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-WT-YFq">
                                 <rect key="frame" x="225" y="302" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bubble5" id="t6a-zt-GvM">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="bubble5" translatesAutoresizingMaskIntoConstraints="NO" id="t6a-zt-GvM">
                                 <rect key="frame" x="140" y="411" width="84" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="AnimationHub" id="77R-pu-i3o">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="AnimationHub" translatesAutoresizingMaskIntoConstraints="NO" id="77R-pu-i3o">
                                 <rect key="frame" x="4" y="133" width="311" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="dot" id="3Tn-1A-NOq">
-                                <rect key="frame" x="63" y="124" width="9" height="9"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="3Tn-1A-NOq">
+                                <rect key="frame" x="63" y="123" width="9" height="9"/>
                                 <animations/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usrename" textAlignment="natural" minimumFontSize="17" background="textInput" id="6gM-dP-IZe">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usrename" textAlignment="natural" minimumFontSize="17" background="textInput" translatesAutoresizingMaskIntoConstraints="NO" id="6gM-dP-IZe">
                                 <rect key="frame" x="24" y="198" width="273" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="78G-j1-0jY"/>
+                                    <constraint firstAttribute="width" constant="273" id="Vwl-YG-50j"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="textInput" id="PMK-8V-jmO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="textInput" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-8V-jmO">
                                 <rect key="frame" x="24" y="256" width="273" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fN3-P6-EFM"/>
+                                    <constraint firstAttribute="width" constant="273" id="wQu-wQ-0X4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Hqp-Wc-FCd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqp-Wc-FCd">
                                 <rect key="frame" x="24" y="321" width="273" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="MGJ-w2-vpa"/>
+                                    <constraint firstAttribute="height" constant="54" id="koh-mi-Mha"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="登录" backgroundImage="buttonBackground">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -582,14 +599,35 @@
                                     <action selector="okLoginTapped:" destination="wPA-Jv-5eP" eventType="touchUpInside" id="Vow-zb-DTB"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="warning" id="8ys-ab-vGy">
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="8ys-ab-vGy">
                                 <rect key="frame" x="24" y="314" width="273" height="52"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="9Ch-pM-OGq"/>
+                                    <constraint firstAttribute="width" constant="273" id="f3l-7a-GOb"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="77R-pu-i3o" firstAttribute="top" secondItem="jY2-ZT-EMQ" secondAttribute="bottom" constant="69" id="2Hv-Mk-9So"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="511-Jk-cZz" secondAttribute="trailing" constant="-20" id="5OT-af-9Iu"/>
+                            <constraint firstItem="511-Jk-cZz" firstAttribute="leading" secondItem="Rfy-ev-QzC" secondAttribute="leadingMargin" constant="-20" id="B5I-dv-Rei"/>
+                            <constraint firstItem="PMK-8V-jmO" firstAttribute="top" secondItem="6gM-dP-IZe" secondAttribute="bottom" constant="18" id="LmH-eP-xBP"/>
+                            <constraint firstItem="511-Jk-cZz" firstAttribute="top" secondItem="jY2-ZT-EMQ" secondAttribute="bottom" constant="-64" id="MoI-xY-C2C"/>
+                            <constraint firstItem="77R-pu-i3o" firstAttribute="leading" secondItem="3Tn-1A-NOq" secondAttribute="trailing" constant="-68" id="SYc-rr-5rK"/>
+                            <constraint firstItem="6gM-dP-IZe" firstAttribute="centerX" secondItem="Rfy-ev-QzC" secondAttribute="centerX" id="T9d-Ps-Pye"/>
+                            <constraint firstItem="8ys-ab-vGy" firstAttribute="top" secondItem="PMK-8V-jmO" secondAttribute="bottom" constant="18" id="dFJ-TP-z8L"/>
+                            <constraint firstItem="Hqp-Wc-FCd" firstAttribute="top" secondItem="PMK-8V-jmO" secondAttribute="bottom" constant="25" id="dyg-yB-EnH"/>
+                            <constraint firstItem="3Tn-1A-NOq" firstAttribute="top" secondItem="77R-pu-i3o" secondAttribute="top" constant="-10" id="g5i-io-FbR"/>
+                            <constraint firstItem="8ys-ab-vGy" firstAttribute="centerX" secondItem="Rfy-ev-QzC" secondAttribute="centerX" id="jhe-Oy-fgg"/>
+                            <constraint firstItem="77R-pu-i3o" firstAttribute="centerX" secondItem="Rfy-ev-QzC" secondAttribute="centerX" id="krL-3L-1d9"/>
+                            <constraint firstItem="PMK-8V-jmO" firstAttribute="centerX" secondItem="Rfy-ev-QzC" secondAttribute="centerX" id="ngc-wp-4s6"/>
+                            <constraint firstItem="6gM-dP-IZe" firstAttribute="top" secondItem="77R-pu-i3o" secondAttribute="bottom" constant="29" id="qWx-7i-VaY"/>
+                            <constraint firstItem="Hqp-Wc-FCd" firstAttribute="centerX" secondItem="Rfy-ev-QzC" secondAttribute="centerX" id="uYB-YP-GJR"/>
+                            <constraint firstItem="nTE-qd-Yqh" firstAttribute="top" secondItem="511-Jk-cZz" secondAttribute="bottom" constant="-99" id="unY-LY-pCx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3jo-MF-QSE"/>
                     <connections>
@@ -614,13 +652,16 @@
         <scene sceneID="xHi-pS-WZ8">
             <objects>
                 <viewController id="5Jq-ym-k3O" customClass="OpacityViewController" customModule="iOSAnimationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tmJ-c0-YJK"/>
+                        <viewControllerLayoutGuide type="bottom" id="s9v-qZ-n3e"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YXr-Cc-6nf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="Z60-Ai-Acy">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z60-Ai-Acy">
                                 <rect key="frame" x="61" y="184" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
